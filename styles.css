@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Sora:wght@400;600&display=swap');
+
+:root {
+  --blue: #0f9afe;
+  --white: #ffffff;
+  --white-200: #eff8ff;
+  --white-400: #dbdbdb;
+  --gray: #6e7275;
+  --gray-light: #dbdbdb;
+  --gray-200: #293145;
+
+  --inter: 'Inter', sans-serif;
+  --sora: 'Sora', sans-serif;
+
+  --shadow: 1px 3px 4px rgba(19, 125, 224, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* RESET */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+
+.container {
+  padding: 0 24px;
+}
+
+section {
+  text-align: center;
+}
+
+section h2 {
+  margin-top: 40px;
+  color: var(--gray-200);
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+section h3 {
+  margin-top: 32px;
+  color: var(--gray-200);
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+section h4 {
+  color: var(--gray-200);
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+section p {
+  color: var(--gray);
+  font-family: var(--inter);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+button {
+  background-color: var(--blue);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.card {
+  width: 184px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.card p {
+  margin-top: 4px;
+}
+.card h4 {
+  margin-top: 20px;
+}
+
+/* header */
+
+header {
+  margin: 24px 0 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 66px;
+  font-family: var(--inter);
+  font-weight: 500;
+}
+
+header ul li {
+  cursor: pointer;
+}
+header ul li a {
+  text-decoration: none;
+  color: var(--gray);
+}
+header ul li a:hover {
+  color: var(--gray-200);
+}
+
+header .menu {
+  display: none;
+  cursor: pointer;
+}
+
+header .menu-opened {
+  display: none;
+  background-color: var(--white-200);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+}
+header .menu-opened img {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+header .menu-opened ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  position: fixed;
+}
+
+header .menu-opened ul li a {
+  font-size: 40px;
+}
+/* home */
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .leftside {
+  padding-bottom: 25px;
+  overflow-y: hidden;
+}
+
+.home .rightside {
+  align-items: flex-end;
+}
+
+section.home {
+  background-color: var(--white-200);
+}
+
+section.home h1 {
+  padding-top: 24px;
+  text-align: start;
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--gray-200);
+}
+
+section.home button {
+  padding: 7.5px 27px;
+  margin-top: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* How-Works */
+
+section.how-works .card-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Download */
+
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 32px 24px;
+  background-color: var(--white-200);
+}
+
+.download h3 {
+  margin: 0;
+}
+
+.download p {
+  margin-top: 16px;
+  line-height: 18px;
+}
+
+.download .brands {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.download .brand {
+  width: 144px;
+}
+
+.download .rightside {
+  display: none;
+}
+
+/* our-plans */
+
+.our-plans p {
+  margin: 0 auto;
+  margin-top: 16px;
+  line-height: 18px;
+}
+
+.cards-price {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0 29px;
+  width: 100%;
+  background: var(--white-200);
+  border-radius: 8px;
+}
+
+.card-price.dark {
+  background-color: var(--gray-200);
+}
+
+.card-price.dark h2,
+.card-price.dark .price-area div {
+  color: var(--white);
+}
+
+.card-price.dark p {
+  color: var(--white-400);
+}
+
+.card-price.dark button {
+  box-shadow: none;
+}
+
+.card-price.dark button.top {
+  font-family: var(--inter);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 5px 32px;
+  letter-spacing: 0.2em;
+}
+
+.card-price h2 {
+  margin: 0;
+}
+
+.card-price .price-area {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  align-items: baseline;
+}
+
+.card-price .dolar {
+  font-size: 20px;
+  font-family: var(--sora);
+  color: var(--gray-200);
+  font-weight: 700;
+}
+
+.card-price .price {
+  font-size: 50px;
+  font-family: var(--sora);
+  color: var(--gray-200);
+  font-weight: 700;
+}
+.card-price .month {
+  font-size: 26px;
+  font-family: var(--sora);
+  color: var(--gray-200);
+  font-weight: 700;
+}
+
+.card-price p {
+  width: 300px;
+  font-family: var(--inter);
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 40px;
+}
+
+.card-price button {
+  margin-top: 50px;
+  box-shadow: var(--shadow);
+  padding: 8px 80px;
+}
+
+/* contato */
+
+section.contato {
+  margin-top: 40px;
+  height: 360px;
+  width: 100%;
+  background-image: url(images/computer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.contato h2 {
+  color: var(--white);
+}
+
+.contato p {
+  margin: 16px auto 0;
+  color: var(--white-400);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: var(--inter);
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato form input {
+  margin-top: 24px;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--white);
+  font-family: var(--inter);
+  outline: none;
+}
+
+.contato form input::placeholder {
+  color: var(--white);
+}
+
+.contato form button {
+  margin-top: 38px;
+  padding: 8px 0;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--gray-200);
+  font-family: var(--sora);
+  font-weight: 400;
+  padding: 21px 0;
+}
+
+@media (max-width: 300px) {
+  .download .brands {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-plans p {
+    padding: 0 24px;
+  }
+  section.home div {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 690px) {
+  header ul {
+    display: none;
+  }
+  header .menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 541px) {
+  .home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+  }
+  section.how-works .card-area {
+    column-count: 3;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 24px;
+  }
+  section.how-works .card-price {
+    padding: 0 24px;
+  }
+
+  .download p {
+    max-width: 600px;
+  }
+  .card-price p {
+    font-size: 20px;
+    width: 100%;
+    max-width: 600px;
+
+    margin-top: 12px;
+  }
+  .card-price button {
+    padding: 16px 80px;
+  }
+  section.contato button {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 840px) {
+  header.container,
+  .home,
+  .how-works,
+  .cards-price,
+  section.contato {
+    padding: 0 90px;
+  }
+  section.contato button {
+    max-width: 300px;
+  }
+  .download .rightside {
+    display: flex;
+  }
+  .download {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    margin: 0;
+  }
+  header {
+    height: 100%;
+  }
+  header.container,
+  .home,
+  .how-works,
+  .cards-price,
+  section.contato,
+  .download,
+  .our-plans {
+    padding: 0 130px;
+  }
+
+  .download {
+    margin-top: 110px;
+  }
+  section.contato button {
+    max-width: 300px;
+  }
+  .cards-price {
+    column-count: 3;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: space-between;
+    margin: 96px auto 0;
+    padding: 0 24px;
+  }
+  .card-price {
+    padding: 0 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-price h2 {
+    margin-top: 56px;
+    overflow-y: hidden;
+  }
+  .card-price .top {
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+  .card-price p {
+    margin-top: 47px;
+    font-size: 18px;
+    line-height: 25px;
+    width: 100%;
+  }
+  .card-price.dark h2 {
+    margin-top: 32px;
+    font-size: 32px;
+  }
+  .card-price.dark .price-area {
+    margin-top: 32px;
+  }
+  .card-price .price-area {
+    margin-top: 60px;
+  }
+  .card-price button {
+    margin-bottom: 64px;
+  }
+  section.contato {
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    margin: 0;
+  }
+  header {
+    height: 100%;
+  }
+  .home {
+    height: 640px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home .leftside {
+    flex: 1;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home .leftside h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .home .leftside button {
+    padding: 16px 36px;
+    max-width: 200px;
+    margin-top: 50px;
+  }
+
+  .home .rightside img {
+    width: 500px;
+    height: 500px;
+  }
+
+  section h2 {
+    margin-top: 56px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .how-works .card-area .card {
+    margin-top: 80px;
+  }
+  .how-works .card-area .card h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 30px;
+  }
+  .how-works .card-area .card p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 16px;
+  }
+  .download {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 130px;
+    height: 475px;
+  }
+  .download .leftside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .download .leftside h3 {
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .download .leftside p {
+    font-size: 16px;
+    text-align: left;
+    line-height: 26px;
+    max-width: 444px;
+  }
+  .download .leftside .brands {
+    justify-content: start;
+  }
+  .download .rightside img {
+    width: 400px;
+    height: 400px;
+  }
+  .our-plans {
+    padding: 0;
+  }
+  .our-plans .cards-price {
+    padding: 0 130px;
+  }
+  .our-plans .cards-price .card-price p {
+    max-width: 300px;
+  }
+  .our-plans p {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 570px;
+  }
+  section.contato {
+    padding: 0 130px;
+    overflow-y: hidden;
+    min-height: 500px;
+    margin-top: 120px;
+  }
+  section.contato h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  section.contato p {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 528px;
+    margin-top: 16px;
+  }
+  section.contato form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 40px;
+    margin-top: 90px;
+  }
+  section.contato form input {
+    font-size: 18px;
+    line-height: 21px;
+    padding-bottom: 10px;
+  }
+  section.contato form button {
+    padding: 8px 32px;
+  }
+}
